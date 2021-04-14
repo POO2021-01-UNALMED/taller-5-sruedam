@@ -4,9 +4,11 @@ import java.util.*;
 public class Zoologico {
 	private String nombre;
 	private String ubicacion;
-	private ArrayList<Zona> zonas;
+	private ArrayList<Zona> zonas = new ArrayList<Zona>();
 	
-	public Zoologico() {}
+	public Zoologico() {
+		this.zonas = new ArrayList<Zona>();
+	}
 	
 	public Zoologico(String nombre, String ubicacion) {
 		this.nombre = nombre;
@@ -25,6 +27,7 @@ public class Zoologico {
 	
 	public void agregarZonas(Zona nuevaZona) {
 		zonas.add(nuevaZona);
+		nuevaZona.setZoo(this);
 	}
 	
 	public int cantidadTotalAnimales() {

@@ -3,7 +3,7 @@ import java.util.*;
 import gestion.Zona;
 
 public class Pez extends Animal {
-	private static ArrayList<Pez> listado;
+	private static ArrayList<Pez> listado = new ArrayList<Pez>();
 	public static int salmones = 0;
 	public static int bacalaos = 0;
 	private String colorEscamas;
@@ -12,11 +12,13 @@ public class Pez extends Animal {
 	public Pez() {
 		totalAnimales ++;
 		listado.add(this);
+		this.zona.agregarAnimales(this);
 	}
 	
 	public Pez(String nombre, int edad, String habitat, String genero, Zona zona, String colorEscamas, int cantidadAletas) {
 		Animal.totalAnimales ++;
 		listado.add(this);
+		this.zona.agregarAnimales(this);
 		this.nombre = nombre;
 		this.edad = edad;
 		this.habitat = habitat;
@@ -28,6 +30,7 @@ public class Pez extends Animal {
 	public Pez(String nombre, int edad, String habitat, String genero, String colorEscamas, int cantidadAletas) {
 		Animal.totalAnimales ++;
 		listado.add(this);
+		this.zona.agregarAnimales(this);
 		this.nombre = nombre;
 		this.edad = edad;
 		this.habitat = habitat;

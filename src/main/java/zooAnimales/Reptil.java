@@ -3,7 +3,7 @@ import java.util.*;
 import gestion.Zona;
 
 public class Reptil extends Animal {
-	private static ArrayList<Reptil> listado;
+	private static ArrayList<Reptil> listado = new ArrayList<Reptil>();
 	public static int iguanas = 0;
 	public static int serpientes = 0;
 	private String colorEscamas;
@@ -12,11 +12,13 @@ public class Reptil extends Animal {
 	public Reptil() {
 		totalAnimales ++;
 		listado.add(this);
+		this.zona.agregarAnimales(this);
 	}
 	
 	public Reptil(String nombre, int edad, String habitat, String genero, Zona zona, String colorEscamas, int largoCola) {
 		Animal.totalAnimales ++;
 		listado.add(this);
+		this.zona.agregarAnimales(this);
 		this.nombre = nombre;
 		this.edad = edad;
 		this.habitat = habitat;
@@ -28,6 +30,7 @@ public class Reptil extends Animal {
 	public Reptil(String nombre, int edad, String habitat, String genero, String colorEscamas, int largoCola) {
 		Animal.totalAnimales ++;
 		listado.add(this);
+		this.zona.agregarAnimales(this);
 		this.nombre = nombre;
 		this.edad = edad;
 		this.habitat = habitat;

@@ -3,7 +3,7 @@ import java.util.*;
 import gestion.Zona;
 
 public class Anfibio extends Animal {
-	private static ArrayList<Anfibio> listado;
+	private static ArrayList<Anfibio> listado = new ArrayList<Anfibio>();
 	public static int ranas = 0;
 	public static int salamandras = 0;
 	private String colorPiel;
@@ -12,11 +12,13 @@ public class Anfibio extends Animal {
 	public Anfibio() {
 		totalAnimales ++;
 		listado.add(this);
+		this.zona.agregarAnimales(this);
 	}
 	
 	public Anfibio(String nombre, int edad, String habitat, String genero, Zona zona, String colorPiel, boolean venenoso) {
 		Animal.totalAnimales ++;
 		listado.add(this);
+		this.zona.agregarAnimales(this);
 		this.nombre = nombre;
 		this.edad = edad;
 		this.habitat = habitat;
@@ -28,6 +30,7 @@ public class Anfibio extends Animal {
 	public Anfibio(String nombre, int edad, String habitat, String genero, String colorPiel, boolean venenoso) {
 		Animal.totalAnimales ++;
 		listado.add(this);
+		this.zona.agregarAnimales(this);
 		this.nombre = nombre;
 		this.edad = edad;
 		this.habitat = habitat;
