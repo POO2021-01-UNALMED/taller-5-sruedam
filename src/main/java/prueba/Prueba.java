@@ -1,4 +1,5 @@
 package prueba;
+
 import gestion.*;
 import zooAnimales.*;
 public class Prueba {
@@ -28,5 +29,7 @@ public class Prueba {
 		Pez.crearBacalao("test", 11, "M");
 		
 		System.out.println(zoo.cantidadTotalAnimales());
+		
+		System.out.println(Ave.aguilas +" "+ Ave.halcones);
 	}
 }
