@@ -11,13 +11,17 @@ public class Ave extends Animal {
 	public Ave() {
 		totalAnimales ++;
 		listado.add(this);
-		this.zona.agregarAnimales(this);
+		if(this.zona != null) {
+			this.zona.agregarAnimales(this);
+		}
 	}
 	
 	public Ave(String nombre, int edad, String habitat, String genero, Zona zona, String colorPlumas) {
 		Animal.totalAnimales ++;
 		listado.add(this);
-		this.zona.agregarAnimales(this);
+		if(this.zona != null) {
+			this.zona.agregarAnimales(this);
+		}
 		this.nombre = nombre;
 		this.edad = edad;
 		this.habitat = habitat;
@@ -28,7 +32,9 @@ public class Ave extends Animal {
 	public Ave(String nombre, int edad, String habitat, String genero, String colorPlumas) {
 		Animal.totalAnimales ++;
 		listado.add(this);
-		this.zona.agregarAnimales(this);
+		if(this.zona != null) {
+			this.zona.agregarAnimales(this);
+		}
 		this.nombre = nombre;
 		this.edad = edad;
 		this.habitat = habitat;

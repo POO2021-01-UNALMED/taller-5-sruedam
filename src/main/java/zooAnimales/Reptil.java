@@ -12,13 +12,17 @@ public class Reptil extends Animal {
 	public Reptil() {
 		totalAnimales ++;
 		listado.add(this);
-		this.zona.agregarAnimales(this);
+		if(this.zona != null) {
+			this.zona.agregarAnimales(this);
+		}
 	}
 	
 	public Reptil(String nombre, int edad, String habitat, String genero, Zona zona, String colorEscamas, int largoCola) {
 		Animal.totalAnimales ++;
 		listado.add(this);
-		this.zona.agregarAnimales(this);
+		if(this.zona != null) {
+			this.zona.agregarAnimales(this);
+		}
 		this.nombre = nombre;
 		this.edad = edad;
 		this.habitat = habitat;
@@ -30,7 +34,9 @@ public class Reptil extends Animal {
 	public Reptil(String nombre, int edad, String habitat, String genero, String colorEscamas, int largoCola) {
 		Animal.totalAnimales ++;
 		listado.add(this);
-		this.zona.agregarAnimales(this);
+		if(this.zona != null) {
+			this.zona.agregarAnimales(this);
+		}
 		this.nombre = nombre;
 		this.edad = edad;
 		this.habitat = habitat;

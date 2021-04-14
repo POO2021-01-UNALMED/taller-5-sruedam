@@ -11,7 +11,9 @@ public class Animal {
 	
 	public Animal() {
 		totalAnimales++;
-		this.zona.agregarAnimales(this);
+		if(this.zona != null) {
+			this.zona.agregarAnimales(this);
+		}
 	}
 	
 	public Animal(String nombre, int edad, String habitat, String genero, Zona zona) {
@@ -21,7 +23,9 @@ public class Animal {
 		this.genero = genero;
 		this.zona = zona;
 		Animal.totalAnimales ++;
-		this.zona.agregarAnimales(this);
+		if(this.zona != null) {
+			this.zona.agregarAnimales(this);
+		}
 	}
 	
 	public Animal(String nombre, int edad, String habitat, String genero) {
@@ -30,7 +34,9 @@ public class Animal {
 		this.habitat = habitat;
 		this.genero = genero;
 		Animal.totalAnimales ++;
-		this.zona.agregarAnimales(this);
+		if(this.zona != null) {
+			this.zona.agregarAnimales(this);
+		}
 	}
 
 	public String movimiento() {
